@@ -1,0 +1,26 @@
+ISE 311 PROJECT- DETAILED DESCRIPTION AND DESIGN
+
+ENTITIES, ATTRIBUTES, AND RELATIONS
+
+A specific manufacturing company wants us to design their main factories database. Here’s the information that we gather: 
+
+Employees are identified by an ID, and their names, phone numbers, gender, salary, and sales must be recorded.
+Customers are identified by an ID, and their name, mail must be recorded.
+Factories are identified by an ID, and their name, phone numberi location, and manufacturing target must be recorded.
+All manufactured products identified by an ID and their price, type, average quant and manufacturing duration must be recorded.
+Store ID, date, quant information about orders.
+Store ID, transportation type, and transportation cost information about shipping.
+Store ID, net price, target sales, demand information about sales.
+Sales made are shipped from factory to customers.
+All employees work in one specific factory.
+Products are produced in factories. Each product can produce in each factory.
+Factories can make sales. Factories sell products to customers.
+Employees took orders from customers.
+A factory can receive more than one order. At the same time, each order can be received by more than one factory.
+Each ordered product will be produced. Every manufactured product will also be sold.
+Every product sold will be shipped by the company.
+Each sale has its own unique shipping. Each shipment belongs to at least one sale.
+Each sales must have a sales ID and each order must have an order ID.
+Each employee can receive more than one order. Every order must be taken by an employee.
+A product can be ordered more than once. Only one product can be ordered per order. The product will be produced after each order.
+A different order number is assigned for each order. Only one type of product can be ordered in an order. If the customer wishes to order a different product, a different order number is assigned to him. The quantity of the order depends on the customer.
