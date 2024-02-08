@@ -1,0 +1,1313 @@
+
+<!-- saved from url=(0052)file:///Users/edanur/Desktop/projectfinalreport.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+h1{color:red}
+h2{text-transform:uppercase;color:#2F5496}
+p{text-align:justify;text-indent:2em}
+th{text-align:center;background-color:yellow}
+#li{background-color:#C45911;}
+</style>
+   
+</head>
+<body><h1 align="center" id="top"> ISE 311 PROJECT/ FINAL REPORT  </h1>
+<br>
+
+  <h2 align="center">REPORT TITLES</h2>
+<ol start="1"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#prob">PROBLEM DEFINITION</a></li>
+    <li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#ent">ENTITIES, ATTRIBUTES AND THEIR RELATIONS </a></li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#ent">
+    </a><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#ent"></a><a href="file:///Users/edanur/Desktop/projectfinalreport.html#erd">E/R DIAGRAM</a></li>
+    <li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#tab">TABLE STRUCTURES</a></li>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#emp" target="">EMPLOYEES TABLE</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#pro">PRODUCTS TABLE</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#ord">ORDERS TABLE</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#fac">FACTORIES TABLE</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#sal">SALES TABLE</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#shp">SHIPPING TABLE</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#cst">CUSTOMERS TABLE</a></li></ul>
+    <li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#dat">DATA TYPES TABLE</a></li>
+    <li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#que">QUERY QUESTIONS,ANSWERS, AND TABLES</a></li>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu1">Q1</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu2">Q2</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu3">Q3</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu4">Q4</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu5">Q5</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu6">Q6</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu7">Q7</a></li></ul>
+        <ul type="square"><li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#qu8">Q8</a></li></ul>
+    <li><a href="file:///Users/edanur/Desktop/projectfinalreport.html#cof">CODES FOR INSERTING DATAS TO SQL SYSTEM</a></li></ol>
+
+<h2 align="center" id="prob">PROBLEM DEFINITION</h2>
+<p>In this project;
+
+      A specific manufacturing  company have a database problem. This company have main factories which produce and sell products to specific stores. This manufacturing company having problems with database confusion with factories and wants to get rid of data problems of the manufacturing factories. This company wants to make an application for the customers. In order to work properly, the company wants to have a specific database that is easy to access and contains detailed information about everything when needed. In order to fix and organize the database they hired us. We will create a database with this manufacturing company so that they can store and manage their data about their factories in a secure environment.
+</p>
+
+<br>
+
+<h2 align="center" id="ent"> ENTITIES, ATTRIBUTES AND THEIR RELATIONS </h2>
+<p> A specific manufacturing company want us to design their main factories database. Here’s the information that we gather: 
+</p>
+<ul style="margin-left:15px;" type="circle">
+  <li>Employees are identified by an ID, and their names, phone numbers, gender, salary, and sales must be recorded.
+  </li>
+  <li>Customers are identified by an ID, and their name, mail must be recorded.
+  </li>
+  <li>Factories are identified by an ID, and their name, phone number, location, and manufacturing target must be recorded.
+  </li>
+  <li>All manufactured products identified by an ID and their price, type, average quant and manufacturing duration must be recorded.
+  </li>
+  <li>Store ID, date, quant information about orders.
+  </li>
+  <li>Store ID, transportation type, and transportation cost information about shipping.
+  </li>
+  <li>Store ID, net price, target sales, demand information about sales.
+  </li>
+  <li>Sales made are shipped from factory to customers.
+  </li>
+  <li>All employees work in one specific factory.
+  </li>
+  <li>Products are produced in factories. Each product can produce in each factory.
+  </li>
+  <li>Employees took orders from customers.
+  </li>
+  <li>A factory can receive more than one order. At the same time, each order can be received by more than one factory.
+  </li>
+  <li>Each ordered product will be produced. Every manufactured product will also be sold.
+  </li>
+  <li>Every product sold will be shipped by the company.
+  </li>
+  <li>Each sale has its own unique shipping. Each shipment belongs to at least one sale.
+  </li>
+  <li>Each employee can receive more than one order. Every order must be taken by an employee.
+  </li>
+  <li>A product can be ordered more than once. Only one product can be ordered per order. 
+  </li>
+  <li>A different order number is assigned for each order. Only one type of product can be ordered in an order. If the customer wishes to order a different product, a different order number is assigned to him. The quantity of the order depends on the customer.
+  </li>
+  <li>Each sales must have sales ID and each order must have an order ID.
+  </li>
+  </ul>
+<br>
+
+<h2 align="center" id="tab"> TABLE STRUCTURES</h2>
+
+<table border="1" align="center">    
+<tbody><tr><th colspan="7;" align="center;" id="emp">EMPLOYEES(SALES DEPT.CHEFS)</th>
+    </tr><tr>
+    <td style="color:#ff0000;" align="center">EMP_ID</td>
+	<td style="color:#ff0000;" align="center">EMP_NAME</td>
+	<td style="color:#ff0000;" align="center">EMP_PHONE_NUM</td>
+	<td style="color:#ff0000;" align="center">GENDER</td>
+	<td style="color:#ff0000;" align="center">SALARY</td>
+	<td style="color:#ff0000;" align="center">EMP_SALES</td>
+	<td style="color:#ff0000;" align="center">FACTORY_COD</td>
+    </tr>
+    
+ <tr>
+    <td align="center">1</td>
+	<td align="center">ayşe topal</td>
+	<td align="center">5345678908</td>
+	<td align="center">F</td>
+	<td align="center">₺9.726,00</td>
+	<td align="center">₺28.164,00</td>
+	<td align="center">F001</td>
+ </tr>
+ <tr>
+    <td align="center">2</td>
+	<td align="center">fatma yıldırım</td>
+	<td align="center">1328940844</td>
+	<td align="center">F</td>
+	<td align="center">₺7.667,00</td>
+	<td align="center">₺656,00</td>
+	<td align="center">F002</td>
+</tr>
+<tr>
+    <td align="center">3</td>
+	<td align="center">sude kaya</td>
+	<td align="center">9138301402</td>
+	<td align="center">F</td>
+	<td align="center">₺3.361,00</td>
+	<td align="center">₺2.649,00</td>
+	<td align="center">F003</td>
+</tr>
+<tr>
+    <td align="center">4</td>
+	<td align="center">ahmet özservet</td>
+	<td align="center">2736050896</td>
+	<td align="center">M</td>
+	<td align="center">₺3.449,00</td>
+	<td align="center">₺15.068,00</td>
+	<td align="center">F004</td>
+</tr>
+<tr>
+    <td align="center">5</td>
+	<td align="center">mehmet karataş</td>
+	<td align="center">7769866229</td>
+	<td align="center">M</td>
+	<td align="center">₺8.449,00</td>
+	<td align="center">₺163,00</td>
+	<td align="center">F005</td>
+</tr>
+<tr>
+    <td align="center">6</td>
+	<td align="center">ali kılınç</td>
+	<td align="center">6530289615</td>
+	<td align="center">M</td>
+	<td align="center">₺7.819,00</td>
+	<td align="center">₺32.407,00</td>
+	<td align="center">F006</td>
+</tr>
+<tr>
+    <td align="center">7</td>
+	<td align="center">efe bahadır</td>
+	<td align="center">1696612285</td>
+	<td align="center">M</td>
+	<td align="center">₺5.238,00</td>
+	<td align="center">₺17.676,00</td>
+	<td align="center">F007</td>
+</tr>
+<tr>
+    <td align="center">8</td>
+	<td align="center">metin çelebi</td>
+	<td align="center">2743122439</td>
+	<td align="center">M</td>
+	<td align="center">₺4.728,00</td>
+	<td align="center">₺14.710,00</td>
+	<td align="center">F008</td>
+</tr>
+<tr>
+    <td align="center">9</td>
+	<td align="center">mine tekin</td>
+	<td align="center">2417274906</td>
+	<td align="center">F</td>
+	<td align="center">₺3.973,00</td>
+	<td align="center">null</td>
+	<td align="center">F009</td>
+</tr>
+<tr>
+    <td align="center">10</td>
+	<td align="center">selin çetin</td>
+	<td align="center">9590469500</td>
+	<td align="center">F</td>
+	<td align="center">₺5.276,00</td>
+	<td align="center">₺11.679,00</td>
+	<td align="center">F010</td>
+</tr>
+</tbody></table>
+<br>
+<table border="1" align="center">
+<tbody><tr><th colspan="6;align=center" id="pro">PRODUCTS</th>
+</tr><tr>
+   <td style="color:#ff0000;" align="center">PROD_ID</td>
+   <td style="color:#ff0000;" align="center">PROD_PRICE</td>
+   <td style="color:#ff0000;" align="center">TYPE</td>
+   <td style="color:#ff0000;" align="center">AVG_QUANT</td>
+   <td style="color:#ff0000;" align="center">MAN_DURATION</td>
+   <td style="color:#ff0000;" align="center">FACTORY_NUM</td>
+</tr>   
+ <tr>
+    <td align="center">100015 BLK</td>
+	<td align="center">₺428,00</td>
+	<td align="center">FOOTWEAR</td>
+	<td align="center">₺25.518</td>
+	<td align="center">27</td>
+	<td align="center">F001</td>
+</tr>
+<tr>
+    <td align="center">100015 NAT</td>
+	<td align="center">₺1.617,00</td>
+	<td align="center">FOOTWEAR</td>
+	<td align="center">₺33.496</td>
+	<td align="center">19</td>
+	<td align="center">F002</td>
+</tr>
+<tr>
+    <td align="center">100025 BBK</td>
+	<td align="center">₺617,00</td>
+	<td align="center">APPAREL</td>
+	<td align="center">₺21.010</td>
+	<td align="center">29</td>
+	<td align="center">F003</td>
+</tr>
+<tr>
+    <td align="center">100025 NAT</td>
+	<td align="center">₺1.701,00</td>
+	<td align="center">ACCESSORIES</td>
+	<td align="center">₺18.924</td>
+	<td align="center">19</td>
+	<td align="center">F004</td>
+</tr>
+<tr>
+    <td align="center">100026 BBK</td>
+	<td align="center">₺1.504,00</td>
+	<td align="center">ACCESSORIES</td>
+	<td align="center">₺17.842</td>
+	<td align="center">23</td>
+	<td align="center">F005</td>
+</tr>
+<tr>
+    <td align="center">100026 NAT</td>
+	<td align="center">₺1.536,00</td>
+	<td align="center">EQUIPMENT</td>
+	<td align="center">₺22.028</td>
+	<td align="center">24</td>
+	<td align="center">F006</td>
+</tr>
+<tr>
+    <td align="center">100026 WHT</td>
+	<td align="center">₺879,00</td>
+	<td align="center">SAMPLES</td>
+	<td align="center">₺12.526</td>
+	<td align="center">19</td>
+	<td align="center">F007</td>
+</tr>
+<tr>
+    <td align="center">100102 BBK</td>
+	<td align="center">₺1.476,00</td>
+	<td align="center">SAMPLES</td>
+	<td align="center">₺52.706</td>
+	<td align="center">24</td>
+	<td align="center">F008</td>
+</tr>
+<tr>
+    <td align="center">100102 NAT</td>
+	<td align="center">₺1.183,00</td>
+	<td align="center">ACCESSORIES</td>
+	<td align="center">₺24.516</td>
+	<td align="center">21</td>
+	<td align="center">F009</td>
+</tr>
+<tr>
+    <td align="center">100229 BLK</td>
+	<td align="center">₺1.280,00</td>
+	<td align="center">ACCESSORIES</td>
+	<td align="center">₺34.790</td>
+	<td align="center">18</td>
+	<td align="center">F010</td>
+</tr>
+ </tbody></table>
+ <br>
+ <table border="1" align="center">
+  <tbody><tr><th colspan="8;align=center" id="ord"> ORDERS</th>
+   </tr><tr>
+    <td style="color:#ff0000;" align="center">ORD_ID</td>
+	<td style="color:#ff0000;" align="center">DATE</td>
+	<td style="color:#ff0000;" align="center">CUST_CODE</td>
+	<td style="color:#ff0000;" align="center">SHIP_COST</td>
+	<td style="color:#ff0000;" align="center">ORD_QUANT</td>
+	<td style="color:#ff0000;" align="center">EMP_NUM</td>
+	<td style="color:#ff0000;" align="center">PROD_NUM</td>
+	<td style="color:#ff0000;" align="center">PROD_AVG_QUANT</td>
+   </tr>
+ <tr>
+    <td align="center">O123</td>
+    <td align="center">3.12.2020</td>
+	<td align="center">20200101</td>
+	<td align="center">₺666,17</td>
+	<td align="center">₺25.518</td>
+	<td align="center">1</td>
+	<td align="center">100015 BLK</td>
+	<td align="center">₺25.518</td>
+ </tr>
+ <tr>
+    <td align="center">O234</td>
+    <td align="center">4.12.2020</td>
+	<td align="center">20200102</td>
+	<td align="center">₺767,39</td>
+	<td align="center">₺33.496</td>
+	<td align="center">2</td>
+	<td align="center">100015 NAT</td>
+	<td align="center">₺33.496</td>
+</tr>
+<tr>
+    <td align="center">O456</td>
+    <td align="center">5.12.2020</td>
+	<td align="center">20200103</td>
+	<td align="center">₺266,26</td>
+	<td align="center">₺21.010</td>
+	<td align="center">3</td>
+	<td align="center">100025 BBK</td>
+	<td align="center">₺21.010</td>
+</tr>
+<tr>
+    <td align="center">O567</td>
+    <td align="center">6.12.2020</td>
+	<td align="center">20200104</td>
+	<td align="center">₺287,47</td>
+	<td align="center">₺18.924</td>
+	<td align="center">4</td>
+	<td align="center">100025 NAT</td>
+	<td align="center">₺18.924</td>
+</tr>
+<tr>
+    <td align="center">O369</td>
+    <td align="center">7.12.2020</td>
+	<td align="center">20200105</td>
+	<td align="center">₺470,08</td>
+	<td align="center">₺17.842</td>
+	<td align="center">5</td>
+	<td align="center">100026 BBK</td>
+	<td align="center">₺17.842</td>
+</tr>
+<tr>
+    <td align="center">O189</td>
+    <td align="center">8.12.2020</td>
+	<td align="center">20200106</td>
+	<td align="center">₺451,62</td>
+	<td align="center">₺22.028</td>
+	<td align="center">6</td>
+	<td align="center">100026 NAT</td>
+	<td align="center">₺22.028</td>
+</tr>
+<tr>
+    <td align="center">O840</td>
+    <td align="center">9.12.2020</td>
+	<td align="center">20200107</td>
+	<td align="center">₺766,18</td>
+	<td align="center">₺12.526</td>
+	<td align="center">7</td>
+	<td align="center">100026 WHT</td>
+	<td align="center">₺12.526</td>
+</tr>	
+<tr>
+    <td align="center">O346</td>
+    <td align="center">10.12.2020</td>
+	<td align="center">20200108</td>
+	<td align="center">₺671,88</td>
+	<td align="center">₺52.706</td>
+	<td align="center">8</td>
+	<td align="center">100102 BBK</td>
+	<td align="center">₺52.706</td>
+</tr>
+<tr>
+    <td align="center">O518</td>
+    <td align="center">11.12.2020</td>
+	<td align="center">20200109</td>
+	<td align="center">₺1.171,84</td>
+	<td align="center">₺24.516</td>
+	<td align="center">9</td>
+	<td align="center">100102 NAT</td>
+	<td align="center">₺24.516</td>
+</tr>
+<tr>
+    <td align="center">O937</td>
+    <td align="center">12.12.2020</td>
+	<td align="center">20200110</td>
+	<td align="center">₺583,48</td>
+	<td align="center">₺34.790</td>
+	<td align="center">10</td>
+	<td align="center">100229 BLK</td>
+	<td align="center">₺34.790</td>
+</tr>
+<tr>
+    <td align="center">O942</td>
+    <td align="center">13.12.2020</td>
+	<td align="center">202001101</td>
+	<td align="center">₺638,84</td>
+	<td align="center">₺62.834</td>
+	<td align="center">1</td>
+	<td align="center">100015 NAT</td>
+	<td align="center">₺34.790</td>
+</tr>
+</tbody></table>
+<br>
+<table border="1" align="center">
+  <tbody><tr><th colspan="6;align=center" id="fac">FACTORIES</th>
+   </tr><tr>
+    <td style="color:#ff0000;" align="center">FACTORY_ID</td>
+	<td style="color:#ff0000;" align="center">FACTORY_NAME</td>
+	<td style="color:#ff0000;" align="cener">FACTORY_PHONE</td>
+	<td style="color:#ff0000;" align="center">LOCATION</td>
+	<td style="color:#ff0000;" align="center">MAN_TARGET</td>
+	<td style="color:#ff0000;" align="center">ORDER_NUM</td>
+   </tr>
+<tr>
+   <td align="center">F001</td>
+   <td align="center">FACTORY1</td>
+   <td align="center">5855244825</td>
+   <td align="center">KOCAELİ</td>   
+   <td align="center">388</td>
+   <td align="center">O123</td>
+</tr>
+<tr>
+   <td align="center">F002</td>
+   <td align="center">FACTORY2</td>
+   <td align="center">7615787017</td>
+   <td align="center">GEBZE</td>   
+   <td align="center">344</td>
+   <td align="center">O234</td>
+</tr>
+<tr>
+   <td align="center">F003</td>
+   <td align="center">FACTORY3</td>
+   <td align="center">8040176580</td>
+   <td align="center">İZMİT</td>   
+   <td align="center">400</td>
+   <td align="center">O456</td>
+</tr>
+<tr>
+   <td align="center">F004</td>
+   <td align="center">FACTORY4</td>
+   <td align="center">9342015164</td>
+   <td align="center">YALOVA</td>   
+   <td align="center">444</td>
+   <td align="center">O567</td>
+</tr>
+<tr>
+   <td align="center">F005</td>
+   <td align="center">FACTORY5</td>
+   <td align="center">2856603920</td>
+   <td align="center">KOCAELİ</td>   
+   <td align="center">422</td>
+   <td align="center">O369</td>
+</tr>
+<tr>
+   <td align="center">F006</td>
+   <td align="center">FACTORY6</td>
+   <td align="center">2202024916</td>
+   <td align="center">GEBZE</td>   
+   <td align="center">390</td>
+   <td align="center">O189</td>
+</tr>
+<tr>
+   <td align="center">F007</td>
+   <td align="center">FACTORY7</td>
+   <td align="center">5015595274</td>
+   <td align="center">İZMİT</td>   
+   <td align="center">460</td>
+   <td align="center">O840</td>
+</tr>
+<tr>
+   <td align="center">F008</td>
+   <td align="center">FACTORY8</td>
+   <td align="center">7959933869</td>
+   <td align="center">YALOVA</td>   
+   <td align="center">200</td>
+   <td align="center">O346</td>
+</tr>
+<tr>
+   <td align="center">F009</td>
+   <td align="center">FACTORY9</td>
+   <td align="center">5630595943</td>
+   <td align="center">KOCAELİ</td>   
+   <td align="center">372</td>
+   <td align="center">O518</td>
+</tr>
+<tr>
+   <td align="center">F010</td>
+   <td align="center">FACTORY10</td>
+   <td align="center">3164417005</td>
+   <td align="center">GEBZE</td>   
+   <td align="center">238</td>
+   <td align="center">O937</td>
+</tr>
+</tbody></table>
+<br>
+<table border="1" align="center">
+<tbody><tr><th colspan="6;align=center" id="sal">SALES</th>
+</tr><tr>
+  <td style="color:#ff0000;" align="center">SALES_ID</td>
+  <td style="color:#ff0000;" align="center">NET_PRICE</td>
+  <td style="color:#ff0000;" align="center">TARGET_SALES</td>
+  <td style="color:#ff0000;" align="center">DEMAND</td>
+  <td style="color:#ff0000;" align="center">FAC_NUM</td>
+  <td style="color:#ff0000;" align="center">CUST_NUM</td>
+</tr>
+<tr>
+  <td align="center">1931 WNVR</td>
+  <td align="center">₺1.341,84</td>
+  <td align="center">₺2.345,56</td>
+  <td align="center">10</td>
+  <td align="center">F001</td>
+  <td align="center">20200101</td>
+</tr>
+<tr>
+  <td align="center">9931 WNVR</td>
+  <td align="center">₺1.135,62</td>
+  <td align="center">₺6.394,22</td>
+  <td align="center">20</td>
+  <td align="center">F002</td>
+  <td align="center">20200102</td>
+</tr>
+<tr>
+  <td align="center">1193 WNVR</td>
+  <td align="center">₺9.359,52</td>
+  <td align="center">₺9.123,45</td>
+  <td align="center">11</td>
+  <td align="center">F003</td>
+  <td align="center">20200103</td>
+</tr>
+<tr>
+  <td align="center">1365 WNVR</td>
+  <td align="center">₺3.377,20</td>
+  <td align="center">₺3.377,20</td>
+  <td align="center">9</td>
+  <td align="center">F004</td>
+  <td align="center">20200104</td>
+</tr>
+<tr>
+  <td align="center">9284 WSL</td>
+  <td align="center">₺6.627,68</td>
+  <td align="center">₺6.627,68</td>
+  <td align="center">8</td>
+  <td align="center">F005</td>
+  <td align="center">20200105</td>
+</tr>
+<tr>
+  <td align="center">7394 WSL</td>
+  <td align="center">₺6.671,46</td>
+  <td align="center">₺6.671,46</td>
+  <td align="center">2</td>
+  <td align="center">F006</td>
+  <td align="center">20200106</td>
+</tr>
+<tr>
+  <td align="center">9528 GYYL</td>
+  <td align="center">₺1.676,30</td>
+  <td align="center">₺13.759,44</td>
+  <td align="center">3</td>
+  <td align="center">F007</td>
+  <td align="center">20200107</td>
+</tr>
+<tr>
+  <td align="center">9537 WGD</td>
+  <td align="center">₺11.402,70</td>
+  <td align="center">₺36.002,75</td>
+  <td align="center">64</td>
+  <td align="center">F008</td>
+  <td align="center">20200108</td>
+</tr>
+<tr>
+  <td align="center">9274 WGD</td>
+  <td align="center">₺3.206,47</td>
+  <td align="center">₺3.206,47</td>
+  <td align="center">100</td>
+  <td align="center">F009</td>
+  <td align="center">20200109</td>
+</tr>
+<tr>
+  <td align="center">1234 WGD</td>
+  <td align="center">₺536,33</td>
+  <td align="center">₺629,99</td>
+  <td align="center">22</td>
+  <td align="center">F010</td>
+  <td align="center">20200110</td>
+</tr>
+</tbody></table>
+<br>
+<table border="1" align="center">
+<tbody><tr><th colspan="4;" align="center" id="shp"> SHIPPING </th>
+   </tr><tr>
+	<td style="color:#ff0000;" align="center">SHIPPING_ID</td>
+	<td style="color:#ff0000;" align="center">TRANSPORTATION_TYPE</td>
+	<td style="color:#ff0000;" align="center">TRANS_COST</td>
+	<td style="color:#ff0000;" align="center">SALES_ID_NUM</td>
+   </tr>
+    
+    <tr> 
+	 <td align="center">M048</td> 
+	 <td align="center">plane</td> 
+	 <td align="center">₺9.303,00</td>
+	 <td align="center">1931 WNVR</td>
+	</tr>
+   
+     <tr> 
+	 <td align="center">MM041</td> 
+	 <td align="center">courier</td> 
+	 <td align="center">₺1.756,00</td>
+	 <td align="center">9931 WNVR</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">M049</td> 
+	 <td align="center">cargo</td> 
+	 <td align="center">₺5.276,00</td>
+	 <td align="center">1193 WNVR</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">M050</td> 
+	 <td align="center">truck</td> 
+	 <td align="center">₺4.685,00</td>
+	 <td align="center"> 1365 WNVR</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">M051</td> 
+	 <td align="center">plane</td> 
+	 <td align="center">₺5.369,00</td>
+	 <td align="center">9284 WSL</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">Z002</td> 
+	 <td align="center">courier</td> 
+	 <td align="center">₺2.665,00</td>
+	 <td align="center">7394 WSL</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">M999</td>
+	 <td align="center">cargo</td> 
+	 <td align="center">₺3.497,00</td>
+	 <td align="center">9528 GYYL</td>
+	 </tr>
+	 
+	 <tr> 
+	 <td align="center">M995</td> 
+	 <td align="center">truck</td> 
+	 <td align="center">₺7.890,00</td>
+	 <td align="center">9537 WGD</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">M996</td> 
+	 <td align="center">plane</td> 
+	 <td align="center">₺1.323,00</td>
+	 <td align="center">9274 WGD</td>
+	 </tr>
+    
+     <tr> 
+	 <td align="center">PY01</td>
+	 <td align="center">courier</td> 
+	 <td align="center">₺9.627,00</td>
+	 <td align="center">1234 WGD</td>
+	 </tr>
+</tbody></table>
+<br>
+<table border="1" align="center">
+<tbody><tr><th colspan="3;" align="center" id="cst">CUSTOMERS</th>
+ </tr><tr> 
+  <td style="color:#ff0000;" align="center">CUSTOMER_ID</td> 
+  <td style="color:#ff0000;" align="center">CUSTOMER_NAME</td> 
+  <td style="color:#ff0000;" align="center">MAIL</td> 
+ </tr>
+    
+ <tr>
+	<td align="center">20200101</td>
+	<td align="center">IZMIT OUTLET</td> 
+	<td align="center">izmit_outlet@gmail.com</td> 
+ </tr>
+    
+ <tr> 
+   <td align="center">20200102</td> 
+   <td align="center">IST CAPACITY</td> 
+   <td align="center">ist_capacity@outlook.com</td> 
+  </tr>
+    
+     <tr> 
+	 <td align="center">20200103</td> 
+	 <td align="center">BURSA KORUPARK</td>
+	 <td align="center">bursa_korupark@hotmail.com</td> 
+	 </tr>
+    
+      <tr> 
+	  <td align="center">20200104</td>
+	  <td align="center">ANK OPTIMUM</td>
+	  <td align="center">ank_optimum@gmail.com</td>
+	  </tr>
+    
+      <tr> 
+	  <td align="center">20200105</td>
+	  <td align="center">IST CEVAHIR</td>
+	  <td align="center">ist_cevahir@outlook.com</td> 
+	  </tr>
+    
+      <tr> 
+	  <td align="center">20200106</td> 
+	  <td align="center">IST EMAAR</td> 
+	  <td align="center">ist_emaar@hotmail.com</td> 
+	  </tr>
+    
+      <tr>
+	  <td align="center">20200107</td> 
+	  <td align="center">IZMIR OPTIMUM</td> 
+	  <td align="center">izmir_optimum@outlook.com</td>
+	  </tr>
+    
+      <tr> 
+	  <td align="center">20200108</td> 
+	  <td align="center">BURSA MARKA</td>
+	  <td align="center">bursa_marka@gmail.com</td>
+	  </tr>
+    
+      <tr> 
+	  <td align="center">20200109</td> 
+	  <td align="center">IST VADI</td>
+	  <td align="center">ist_vadi@hotmail.com</td> 
+	  </tr>
+    
+      <tr> 
+	  <td align="center">20200110</td>
+	  <td align="center">IST MARMARAPARK</td>
+	  <td align="center">ist_marmarapark@gmail.com</td> 
+	  </tr>
+</tbody></table>
+<h2 align="center" id="dat"> DATA TYPES</h2>
+<table border="1" align="center">
+<tbody><tr><th colspan="2;" align="center"> DATA TYPES</th>
+</tr><tr>
+ <td style="color:#ff0000;" align="center">COLUMN NAMES</td>
+ <td style="color:#ff0000;" align="center">DATA TYPES</td>
+</tr>
+<tr>
+ <td align="center">EMP_ID</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">EMP_NAME</td>
+ <td align="center">CHAR(20)</td>
+</tr>
+<tr>
+ <td align="center">EMP_PHONE_NUM</td>
+ <td align="center">VARCHAR(11)</td>
+</tr>
+<tr>
+ <td align="center">GENDER</td>
+ <td align="center">VARCHAR(1)</td>
+</tr>
+<tr>
+ <td align="center">SALARY</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">EMP_SALES</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">FACTORY_COD</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>
+<tr>
+ <td align="center">ORD_ID</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>
+<tr>
+ <td align="center">DATE</td>
+ <td align="center">DATETIME</td>
+</tr>
+<tr>
+ <td align="center">CUST_CODE</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">SHIP_COST</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">ORD_QUANT</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">EMP_NUM</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">PROD_NUM</td>
+ <td align="center">VARCHAR(10)</td>
+</tr>
+<tr>
+ <td align="center">PROD_AVG_QUANT</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">SALES_ID</td>
+ <td align="center">CHAR(9)</td>
+</tr>
+<tr>
+ <td align="center">NET_PRICE</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">TARGET_SALES</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">DEMAND</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">FAC_NUM</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>
+<tr>
+ <td align="center">CUST_NUM</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">PROD_ID</td>
+ <td align="center">VARCHAR(10)</td>
+</tr>
+<tr>
+ <td align="center">PROD_PRICE</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">TYPE</td>
+ <td align="center">CHAR(20)</td>
+</tr>
+<tr>
+ <td align="center">AVG_QUANT</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">MAN_DURATION</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">FACTORY_NUM</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>
+<tr>
+ <td align="center">FACTORY_ID</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>	
+<tr>
+ <td align="center">FACTORY_NAME</td>
+ <td align="center">CHAR(12)</td>
+</tr>
+<tr>
+ <td align="center">FACTORY_PHONE</td>
+ <td align="center">VARCHAR(11)</td>
+</tr>
+<tr>
+ <td align="center">LOCATION</td>
+ <td align="center">CHAR(10)</td>
+</tr>
+<tr>
+ <td align="center">MAN_TARGET</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">ORDER_NUM</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>
+<tr>
+ <td align="center">SHIPPING_ID</td>
+ <td align="center">VARCHAR(4)</td>
+</tr>
+<tr>
+ <td align="center">TRANSPORTATION_TYPE</td>
+ <td align="center">CHAR(10)</td>
+</tr>
+<tr>
+ <td align="center">TRANS_COST</td>
+ <td align="center">MONEY</td>
+</tr>
+<tr>
+ <td align="center">SALES_ID_NUM</td>
+ <td align="center">CHAR(10)</td>
+</tr>
+<tr>
+ <td align="center">CUSTOMER_ID</td>
+ <td align="center">INT</td>
+</tr>
+<tr>
+ <td align="center">CUSTOMER_NAME</td>
+ <td align="center">CHAR(20)</td>
+</tr>
+<tr>
+ <td align="center">MAIL</td>
+ <td align="center">CHAR(30)</td>
+</tr>
+</tbody></table>
+<br>
+<br>
+<h2 align="center" id="que"> QUERY QUESTIONS,ANSWERS, AND TABLES</h2>
+
+<h3 id="qu1">Q1</h3><p>List employee name and employee ID which employee sale is null.</p>
+
+<pre><b>select emp_name, emp_ID
+from employees
+where emp_sales is null
+</b></pre>
+
+<table border="1" align="left">
+  <tbody><tr>
+    <th align="center"> EMP_NAME </th>
+    <th align="center"> EMP_ID </th>
+ </tr>
+ <tr>
+   <td align="center"> Mine Tekin </td>
+   <td align="center">    9   </td>
+</tr>
+</tbody></table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<h3 id="qu2">Q2</h3><p>List employee name, employee ID who work in factories which located in Kocaeli.</p>
+
+<pre><b>SELECT EMP_ID, EMP_NAME
+FROM EMPLOYEES
+JOIN FACTORIES ON FACTORY_CODE=FACTORY_ID
+WHERE LOCATION='KOCAELİ'
+ORDER BY EMP_ID DESC </b></pre>
+
+<table align="left" border="1">
+  <tbody><tr>
+  <th> EMP_ID </th>
+  <th> EMP_NAME </th>
+   </tr>
+
+ <tr>
+   <td> 9 </td>
+   <td> Mine Tekin </td>
+</tr>
+
+ <tr>
+   <td> 5 </td>
+  <td> Mehmet Karataş </td>
+  </tr>
+
+<tr>
+   <td> 1 </td>
+  <td> Ayşe Topal </td>
+</tr>
+
+</tbody></table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h3 id="qu3">Q3</h3><p>List employee name, employee ID , demand who work in factories which demand is between 2 and 20.</p>
+
+<pre><b>SELECT EMP_ID, EMP_NAME, DEMAND
+FROM EMPLOYEES
+JOIN FACTORIES 
+ON FACTORY_CODE=FACTORY_ID 
+JOIN SALES
+ON FACTORY_ID=FAC_NUM
+WHERE DEMAND BETWEEN 2 AND 20 </b></pre>
+
+<table align="left" border="1">
+<tbody><tr>
+ <th> EMP_ID </th>
+ <th> EMP_NAME </th>
+ <th> DEMAND </th>
+ </tr>
+
+<tr> 
+ <td> 1 </td> <td> Ayşe Topal </td> <td> 10 </td></tr>
+<tr> <td> 2</td> <td> Fatma Yıldırım </td> <td> 20 </td></tr>
+<tr> <td> 3 </td> <td> Sude Kaya </td> <td> 11 </td></tr>
+<tr> <td> 4 </td> <td> Ahmet Özservet </td> <td> 9 </td></tr>
+<tr><td> 5</td> <td>Mehmet Karataş</td> <td>8</td></tr>
+<tr><td> 6</td><td>Ali Kılınç</td>  <td>2</td> </tr>
+<tr><td>7</td><td>Efe Bahadır</td><td>3</td></tr>
+</tbody></table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<h3 id="qu4">Q4</h3><p>list customer mail which net sales price is more than 3,000</p>
+<pre><b> SELECT MAIL
+ FROM SALES
+ LEFT OUTER JOIN CUSTOMERS ON CUST_NUM=CUSTOMER_ID 
+ WHERE NET_PRICE&gt;3000</b></pre>
+    
+<table align="left" border="1">
+
+<tbody><tr><th></th><th>mail</th></tr>
+    <tr><th>1</th><td>bursa_korupark@hotmail.com</td></tr>
+    <tr><th>2</th><td>ank_optimum@gmail.com</td></tr>
+    <tr><th>3</th><td>ist_emaar@hotmail.com</td></tr>
+    <tr><th>4</th><td>ist_vadi@hotmail.com</td></tr>
+    <tr><th>5</th><td>ist_cevahir@qoutlook.com</td></tr>
+    <tr><th>6</th><td>bursa_marka@gmail.com</td></tr>
+</tbody></table>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<h3 id="qu5">Q5</h3><p>list max and min target sales , use join</p>
+<pre><b> SELECT MAX(TARGET_SALES) 
+ FROM SHIPPING
+ JOIN SALES ON SALES_ID=SALES_ID_NUM
+   UNION
+ SELECT MIN(TARGET_SALES) 
+ FROM SALES
+ JOIN SHIPPING ON SALES_ID=SALES_ID_NUM</b></pre>
+    
+<table align="left" border="1">
+<tbody><tr><th>1</th><td>42.00</td></tr>
+<tr><th>2</th><td>36002.75</td></tr>
+</tbody></table>
+    
+<br>
+<br>
+<br>
+    
+<h3 id="qu6">Q6</h3><p>List transportation type, sales ID which sales demand is more than 100 and smaller than 10</p>
+<pre><b> SELECT TRANSPORTATION_TYPE,SALES_ID_NUM,DEMAND
+FROM SHIPPING JOIN SALES ON SALES_ID_NUM =SALES_ID
+WHERE DEMAND&lt;=10
+GROUP BY TRANSPORTATION_TYPE,SALES_ID_NUM,DEMAND 
+
+UNION
+
+SELECT TRANSPORTATION_TYPE,SALES_ID_NUM,DEMAND
+FROM SHIPPING  JOIN SALES  ON SALES_ID_NUM=SALES_ID
+WHERE DEMAND&gt;=60
+GROUP BY TRANSPORTATION_TYPE,SALES_ID_NUM ,DEMAND </b></pre>
+
+<table align="left" border="1">
+    <tbody><tr><th></th><th>TRANSPORTATION_TYPE</th><th>SALES_ID_NUM</th><th>DEMAND</th></tr>
+    <tr><th>1</th><td> cargo</td><td>9528 gyyl</td><td>3</td></tr>
+    <tr><th>2</th><td>courier</td><td>7394 wsl</td><td>2</td></tr>
+    <tr><th>3</th><td>plane</td><td>1931 wnvr</td><td>10</td></tr>
+    <tr><th>4</th><td>plane</td><td>9274 wgd</td><td>100</td></tr>
+    <tr><th>5</th><td>plane</td><td>9284 wsl</td><td>8</td></tr>
+    <tr><th>6</th><td>truck</td><td>1365 wnvr</td><td>9</td></tr>
+    <tr><th>7</th><td>truck</td><td>9537 wgd</td><td>64</td></tr>
+</tbody></table>
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h3 id="qu7">Q7</h3><p>list employee name and phone number which employee's order quant is more than 20000 and smaller than 19000</p>
+    
+<pre><b>SELECT EMP_NAME,EMP_PHONE_NUM
+FROM EMPLOYEES JOIN ORDERS ON EMP_NUM=EMP_ID
+WHERE ORD_QUANT&lt;=19000
+GROUP BY EMP_NAME,EMP_PHONE_NUM
+
+UNION 
+
+SELECT EMP_NAME,EMP_PHONE_NUM
+FROM EMPLOYEES JOIN ORDERS ON EMP_NUM=EMP_ID
+WHERE ORD_QUANT&gt;=20000
+GROUP BY EMP_NAME,EMP_PHONE_NUM </b></pre>
+
+<table align="left" border="1"> 
+    <tbody><tr><th></th><th>EMP_NAME</th><th>EMP_PHONE_NUM</th></tr>
+    <tr><th>1</th><td> sude kaya</td><td>9138301402</td></tr>
+    <tr><th>2</th><td>ahmet özservet</td><td>2736050896</td></tr>
+    <tr><th>3</th><td>ali kılınç</td><td>6530289615</td></tr>
+    <tr><th>4</th><td>ayşe topal</td><td>5345678908</td></tr>
+    <tr><th>5</th><td>efe bahadır</td><td>1696612285</td></tr>
+    <tr><th>6</th><td>fatma yıldırım</td><td>1328940844</td></tr>
+    <tr><th>7</th><td>mehmet karataş</td><td>7769866229</td></tr>
+    <tr><th>8</th><td>metin çelebi</td><td>2743122439</td></tr>
+    <tr><th>9</th><td>mine tekin</td><td>2417274906</td></tr>
+    <tr><th>10</th><td>selin çetin</td><td>9590469500</td></tr>
+</tbody></table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 id="qu8">Q8</h3><p>list customer code ,location which manufacturing target is more than 300</p>
+<pre><b>SELECT CUST_CODE, LOCATION 
+FROM FACTORIES
+JOIN ORDERS ON ORD_ID=ORDER_NUM
+WHERE MAN_TARGET&gt;300
+GROUP BY LOCATION, CUST_CODE</b></pre>
+<br>
+<table align="left" border="1">
+    <tbody><tr><th></th><th>cust_code</th><th>location</th></tr>
+    <tr><th>1</th><td>20200102</td><td>GEBZE</td></tr>
+    <tr><th>2</th><td>20200106</td><td>GEBZE</td></tr>
+    <tr><th>3</th><td>20200103</td><td>IZMIT</td></tr>
+    <tr><th>4</th><td>20200101</td><td>IZMIT</td></tr>
+    <tr><th>5</th><td>20200101</td><td>KOCAELI</td></tr>
+    <tr><th>6</th><td>20200105</td><td>KOCAELİ</td></tr>
+    <tr><th>7</th><td>20200109</td><td>KOCAELİ</td></tr>
+    <tr><th>8</th><td>20200104</td><td>YALOVA</td></tr>
+</tbody></table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+<h2 align="center" id="cof"> CODE FOR INSERTING DATAS TO SQL SYSTEM</h2>
+<pre><b>
+CREATE TABLE EMPLOYEES
+    (EMP_ID INTEGER NOT NULL,
+    EMP_NAME CHAR(20) NOT NULL,
+    EMP_PHONE_NUM VARCHAR(11),
+    GENDER VARCHAR(1) NOT NULL,
+    SALARY MONEY,
+    EMP_SALES MONEY,
+    FACTORY_CODE VARCHAR(4),
+ PRIMARY KEY (EMP_ID, EMP_NAME))
+INSERT INTO EMPLOYEES VALUES(1,'ayşe topal',5345678908,'F',9726,28164,'F001');
+INSERT INTO EMPLOYEES VALUES(2,'fatma yıldırım',1328940844,'F',7667,656,'F002');
+INSERT INTO EMPLOYEES VALUES(3,' sude kaya',9138301402,'F',3361,2649,'F003');
+INSERT INTO EMPLOYEES VALUES(4,'ahmet özservet',2736050896,'M',3449,15068,'F004');
+INSERT INTO EMPLOYEES VALUES(5,'mehmet karataş',7769866229,'M',8449,163,'F005');
+INSERT INTO EMPLOYEES VALUES(6,'ali kılınç',6530289615,'M',7819,32407,'F006');
+INSERT INTO EMPLOYEES VALUES(7,'efe bahadır',1696612285,'M',5238,17676,'F007');
+INSERT INTO EMPLOYEES VALUES(8,'metin çelebi',2743122439,'M',4728,14710,'F008');
+INSERT INTO EMPLOYEES VALUES(9,'mine tekin',2417274906,'F',3973,null,'F009');
+INSERT INTO EMPLOYEES VALUES(10,'selin çetin',9590469500,'F',5276,11679,'F010');
+CREATE TABLE ORDERS
+     (ORD_ID VARCHAR(4) NOT NULL,
+        DATE DATETIME NOT NULL,
+      CUST_CODE INTEGER NOT NULL,
+         SHIP_COST MONEY,
+      ORD_QUANT INTEGER,
+       EMP_NUM INTEGER NOT NULL,
+       PROD_NUM VARCHAR(10) NOT NULL,
+       PROD_AVG_QUANT INTEGER NOT NULL,
+ PRIMARY KEY (ORD_ID))
+INSERT INTO ORDERS VALUES('O123','3.12.2020',20200101,666.17,25518,'1','100015 BLK',25518);
+INSERT INTO ORDERS VALUES('O234','4.12.2020',20200102,767.39,33496,'2','100015 NAT',33496);
+INSERT INTO ORDERS VALUES('O456','5.12.2020',20200103,266.26,21010,'3','100025 BBK',21010);
+INSERT INTO ORDERS VALUES('O567','6.12.2020',20200104,287.47,18924,'4','100025 NAT',18924);
+INSERT INTO ORDERS VALUES('O369','7.12.2020',20200105,470.08,17842,'5','100026 BBK',17842);
+INSERT INTO ORDERS VALUES('O189','8.12.2020',20200106,451.62,22028,'6','100026 NAT',22028);
+INSERT INTO ORDERS VALUES('O840','9.12.2020',20200107,766.18,12526,'7','100026 WHT',12526);
+INSERT INTO ORDERS VALUES('O346','10.12.2020',20200108,671.88,52706,'8','100102 BBK',52706);
+INSERT INTO ORDERS VALUES('O518','11.12.2020',20200109,1171.84,24516,'9','100102 NAT',24516);
+INSERT INTO ORDERS VALUES('O937','12.12.2020',20200110,583.48,34790,'10','100229 BLK',34790);
+INSERT INTO ORDERS VALUES('O942','13.12.2020',20200101,638.84,62834,'11','100229 BLK',34790);
+CREATE TABLE SALES
+   (SALES_ID CHAR(9) NOT NULL,
+         NET_PRICE MONEY NOT NULL,
+         TARGET_SALES MONEY,
+      DEMAND INTEGER,
+       FAC_NUM VARCHAR(4),
+   CUST_NUM INTEGER NOT NULL,
+ PRIMARY KEY (SALES_ID))
+INSERT INTO SALES  VALUES ('1931 WNVR',1341.84,2345.56,10,'F001',20200101);
+INSERT INTO SALES  VALUES ('9931 WNVR',1353.62,6394.22,20,'F002',20200102);
+INSERT INTO SALES  VALUES ('1193 WNVR',9359.52,9123.45,11,'F003',20200103);
+INSERT INTO SALES  VALUES ('1365 WNVR',3377.2,3377.2,9,'F004',20200104);
+INSERT INTO SALES  VALUES ('9284 WSL',6627.68,6627.68,8,'F005',20200105);
+INSERT INTO SALES  VALUES ('7394 WSL',6671.46,6671.46,2,'F006',20200106);
+INSERT INTO SALES  VALUES ('9528 GYYL',1676.3,42,3,'F007',20200107);
+INSERT INTO SALES  VALUES ('9537 WGD',11402.7,13759.44,64,'F008',20200108);
+INSERT INTO SALES  VALUES ('9274 WGD',3206.47,36002.75,100,'F009',20200109);
+INSERT INTO SALES  VALUES ('1234 WGD',536.33,3206.47,22,'F010',20200110);
+CREATE TABLE PRODUCTS
+   (PROD_ID VARCHAR(10) NOT NULL,
+     PROD_PRICE MONEY NOT NULL,
+    TYPE CHAR(20),
+AVG_QUANT INTEGER,
+MAN_DURATION INTEGER,
+FACTORY_NUM VARCHAR(4),
+ PRIMARY KEY (PROD_ID))
+INSERT INTO PRODUCTS VALUES('100015 BLK',428,'FOOTWEAR',25518,27,'F001');
+INSERT INTO PRODUCTS VALUES('100015 NAT',1617,'FOOTWEAR',33496,19,'F002');
+INSERT INTO PRODUCTS VALUES('100025 BBK',617,'APPAREL',21010,29,'F003');
+INSERT INTO PRODUCTS VALUES('100025 NAT',1701,'ACCESSORIES',18924,19,'F004');
+INSERT INTO PRODUCTS VALUES('100026 BBK',1504,'ACCESSORIES',17842,23,'F005');
+INSERT INTO PRODUCTS VALUES('100026 NAT',1536,'EQUIPMENT',22028,24,'F006')
+INSERT INTO PRODUCTS VALUES('100026 WHT',879,'SAMPLES',12526,19,'F007');
+INSERT INTO PRODUCTS VALUES('100102 BBK',1476,'SAMPLES',52706,24,'F008');
+INSERT INTO PRODUCTS VALUES('100102 NAT',1183,'ACCESSORIES',24516,21,'F009');
+INSERT INTO PRODUCTS VALUES('100229 BLK',1280,'ACCESSORIES',34790,18,'F010');
+CREATE TABLE FACTORIES
+  (FACTORY_ID VARCHAR(4) NOT NULL,
+   FACTORY_NAME CHAR(10) NOT NULL,
+   FACTORY_PHONE VARCHAR(11) NOT NULL,
+   LOCATION CHAR(10) NOT NULL,
+   MAN_TARGET INTEGER NOT NULL,
+   ORDER_NUM VARCHAR(4) NOT NULL,
+ PRIMARY KEY (FACTORY_ID,FACTORY_NAME))
+INSERT INTO FACTORIES VALUES ('F001','FACTORY1','5855244825','KOCAELİ',388,'O123');
+INSERT INTO FACTORIES VALUES ('F002','FACTORY2','7615787017','GEBZE',344,'O234');
+INSERT INTO FACTORIES VALUES ('F003','FACTORY3','8040176580','İZMİT',400,'O456');
+INSERT INTO FACTORIES VALUES ('F004','FACTORY4','9342015164','YALOVA',444,'O567');
+INSERT INTO FACTORIES VALUES ('F005','FACTORY5','2856603920','KOCAELİ',422,'O369');
+INSERT INTO FACTORIES VALUES ('F006','FACTORY6','2202024916','GEBZE',390,'O189');
+INSERT INTO FACTORIES VALUES ('F007','FACTORY7','5015595274','İZMİT',460,'O840');
+INSERT INTO FACTORIES VALUES ('F008','FACTORY8','7959933869','YALOVA',200,'O346');
+INSERT INTO FACTORIES VALUES ('F009','FACTORY9','5630595943','KOCAELİ',372,'O518');
+INSERT INTO FACTORIES VALUES ('F010','FACTORY10','3164417005','GEBZE',238,'O937');
+CREATE TABLE SHIPPING
+(SHIPPING_ID VARCHAR(4) NOT NULL,
+TRANSPORTATION_TYPE CHAR(10) NOT NULL,
+TRANS_COST MONEY NOT NULL,
+SALES_ID_NUM CHAR(10) NOT NULL,
+PRIMARY KEY (SHIPPING_ID,TRANSPORTATION_TYPE))
+INSERT INTO SHIPPING VALUES ('M048','PLANE',9303,'1931 WNVR');
+INSERT INTO SHIPPING VALUES ('M041','COURIER',1756,'9931 WNVR');
+INSERT INTO SHIPPING VALUES ('M049','CARGO',5276,'1193 WNVR');
+INSERT INTO SHIPPING VALUES ('M050','TRUCK',4685,'1365 WNVR');
+INSERT INTO SHIPPING VALUES ('M051','PLANE',5369,'9284 WSL');
+INSERT INTO SHIPPING VALUES ('Z002','COURIER',2665,'7394 WSL');
+INSERT INTO SHIPPING VALUES ('M999','CARGO',3497,'9528 GYYL');
+INSERT INTO SHIPPING VALUES ('M995','TRUCK',7890,'9537 WGD');
+INSERT INTO SHIPPING VALUES ('M996','PLANE',1323,'9274 WGD');
+INSERT INTO SHIPPING VALUES ('PY01','COURIER',9627,'1234 WGD');
+CREATE TABLE CUSTOMERS
+(CUSTOMER_ID INTEGER NOT NULL,
+CUSTOMER_NAME CHAR(20) NOT NULL,
+MAIL CHAR(30),
+PRIMARY KEY(CUSTOMER_ID))
+INSERT INTO CUSTOMERS VALUES (20200101,'IZMIT OUTLET','izmit_outlet@gmail.com');
+INSERT INTO CUSTOMERS VALUES (20200102,'IST CAPACITY','ist_capacity@outlook.com');
+INSERT INTO CUSTOMERS VALUES (20200103,'BURSA KORUPARK','bursa_korupark@hotmail.com');
+INSERT INTO CUSTOMERS VALUES (20200104,'ANK OPTIMUM','ank_optimum@gmail.com');
+INSERT INTO CUSTOMERS VALUES (20200105,'IST CEVAHIR','ist_cevahir@outlook.com');
+INSERT INTO CUSTOMERS VALUES (20200106,'IST EMAAR','ist_emaar@hotmail.com');
+INSERT INTO CUSTOMERS VALUES (20200107,'IZMIR OPTIMUM','izmir_optimum@outlook.com');
+INSERT INTO CUSTOMERS VALUES (20200108,'BURSA MARKA','bursa_marka@gmail.com');
+INSERT INTO CUSTOMERS VALUES (20200109,'IST VADI','ist_vadi@hotmail.com');
+INSERT INTO CUSTOMERS VALUES (20200110,'IST MARMARAPARK','ist_marmarapark@gmail.com');
+</b></pre>
+<br>
+<br>
+<br>
+<h3 align="center"> GROUP MEMBERS :  EDANUR ŞAHİN, HELİN SILA KILIÇ , SEDA ÇETİNKAYA,  BEYZA ENGİN</h3>
+<br>
+<br>
+<p align="center"><a href="file:///Users/edanur/Desktop/projectfinalreport.html#top">BACK TO TOP</a></p></body></html>
